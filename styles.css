@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.logo {
+    width: 200px;
+}
+
+/* NAV */
+nav {
+    background: #2c3e50;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icon {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    background: #2c3e50;
+}
+
+.menu-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-links.show {
+    display: flex;
+}
+
+/* CONTENIDO */
+.container {
+    padding: 20px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* COLORES */
+.producto:nth-child(1) { background: #deffec; }
+.producto:nth-child(2) { background: #deffec; }
+.producto:nth-child(3) { background: #ffd8d8; }
+.producto:nth-child(4) { background: #deffec; }
+.producto:nth-child(5) { background: #deffec; }
+
+.descuento {
+    border: 2px solid red;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.old {
+    text-decoration: line-through;
+}
+
+/* BOTÓN COMPRAR */
+.btn-comprar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-comprar:hover {
+    background: #219150;
+}
+
+/* PROMOS */
+.promociones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.promo-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

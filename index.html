@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logos/logo corte.png" class="logo">
+    </div>
+</header>
+
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+</nav>
+
+<div class="container" id="productos">
+    <h2>Productos destacados</h2>
+    <div class="productos">
+
+        <div class="producto">
+            <img src="logos/ARROZ.webp">
+            <h3>Arroz 1kg</h3>
+            <p>S/ 4.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/lechexs.avif">
+            <h3>Leche Gloria</h3>
+            <p>S/ 3.80</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto descuento">
+            <span class="badge">-20%</span>
+            <img src="logos/gaseosa.png">
+            <h3>Gaseosa 1.5L</h3>
+            <p class="old">S/ 6.50</p>
+            <p>S/ 5.20</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/PAnsu.png">
+            <h3>Pan de molde</h3>
+            <p>S/ 5.00</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto descuento">
+            <span class="badge">Promo</span>
+            <img src="logos/huevos.png">
+            <h3>Huevos (docena)</h3>
+            <p class="old">S/ 10.00</p>
+            <p>S/ 8.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="ofertas">
+    <h2>Promociones</h2>
+
+    <div class="promociones-grid">
+        <div class="promo-card">
+            <img src="logos/promo 3por 2 gaseosas.png">
+            <p>Compra 2 gaseosas y lleva 1 gratis</p>
+        </div>
+
+        <div class="promo-card">
+            <img src="logos/promo limpikeza.png">
+            <p>10% de descuento en limpieza</p>
+        </div>
+    </div>
+
+</div>
+
+<footer id="contacto">
+    <p>&copy; 2026 Nova Market</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
+
+// Botones comprar
+const botones = document.querySelectorAll('.btn-comprar');
+
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        alert('Producto agregado al carrito 🛒');
+    });
+});
+</script>
+
+</body>
+</html>
