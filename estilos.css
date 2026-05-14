@@ -1,0 +1,154 @@
+/* --- GENERALES --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+nav {
+    background: #1f1f1f;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* --- LAYOUT CENTRAL --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Alinea todo hacia abajo */
+    align-items: center;    /* Centra los elementos */
+}
+
+#producto-central {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center; /* Centra el texto del smartphone */
+}
+
+/* --- GALERÍA EXPANDIBLE (TU MODELO) --- */
+.galeria-expandible {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: 430px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.galeria-expandible img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.galeria-expandible img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* --- SECCIÓN INFERIOR (CONTACTO + ACCESORIOS) --- */
+.contenedor-inferior {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#contacto {
+    flex: 2; /* Más ancho */
+}
+
+#accesorios {
+    flex: 1; /* Más angosto */
+    background: #eef2f3;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* --- DETALLES Y SEMÁNTICA --- */
+.acordion-container {
+    text-align: left; /* Mantiene el acordeón legible */
+    margin: 30px 0;
+}
+
+details {
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+summary { font-weight: bold; cursor: pointer; }
+
+mark { background: #f1c40f; padding: 2px 5px; }
+
+footer {
+    background: #121212;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* --- AJUSTE MÓVIL --- */
+@media (max-width: 768px) {
+    .contenedor-inferior {
+        flex-direction: column;
+    }
+    .galeria-expandible {
+        height: 300px;
+    }
+}
