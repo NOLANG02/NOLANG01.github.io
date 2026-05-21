@@ -1,134 +1,131 @@
+/* --- ESTILOS GENERALES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-.logo {
-    width: 200px;
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+h2 {
+    margin: 30px 0;
+    color: #2c3e50;
+    border-left: 5px solid #27ae60;
+    padding-left: 15px;
 }
 
-/* NAV */
+/* --- HEADER & NAV --- */
+header { background: white; text-align: center; padding: 20px 0; }
+.logo { width: 200px; }
+
 nav {
     background: #2c3e50;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.menu-icon {
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-}
+.menu-icon { font-size: 28px; color: white; cursor: pointer; display: block; }
+.menu-links { display: none; flex-direction: column; }
+.menu-links.show { display: flex; }
+.menu-links a { color: white; padding: 12px; text-decoration: none; border-bottom: 1px solid #34495e; }
 
-.menu-links {
-    display: none;
-    flex-direction: column;
-    background: #2c3e50;
-}
-
-.menu-links a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.menu-links.show {
-    display: flex;
-}
-
-/* CONTENIDO */
-.container {
-    padding: 20px;
-}
-
-.productos {
+/* --- GRID PRODUCTOS --- */
+.productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
 .producto {
     background: white;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-.producto img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+.producto:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-/* COLORES */
-.producto:nth-child(1) { background: #deffec; }
-.producto:nth-child(2) { background: #deffec; }
-.producto:nth-child(3) { background: #ffd8d8; }
-.producto:nth-child(4) { background: #deffec; }
-.producto:nth-child(5) { background: #deffec; }
+.producto img { width: 100%; height: 160px; object-fit: contain; }
 
-.descuento {
-    border: 2px solid red;
-}
-
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: red;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.old {
-    text-decoration: line-through;
-}
-
-/* BOTÓN COMPRAR */
 .btn-comprar {
     background: #27ae60;
     color: white;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
 }
 
-.btn-comprar:hover {
-    background: #219150;
-}
-
-/* PROMOS */
-.promociones-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.promo-card {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.promo-card img {
+/* --- ACORDEÓN --- */
+.acordion-container {
+    display: flex;
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-/* FOOTER */
-footer {
-    background: #2c3e50;
+.acordion-container img, .link-promo {
+    flex-grow: 1;
+    width: 0;
+    object-fit: cover;
+    opacity: .8;
+    transition: .7s ease;
+    border-right: 2px solid white;
+}
+
+.acordion-container img:hover, .link-promo:hover {
+    flex-grow: 5;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* --- CARRITO FLOTANTE --- */
+#cart-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #e67e22;
     color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 2000;
+}
+
+/* --- CONTACTO --- */
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contacto-form { display: flex; flex-direction: column; gap: 15px; }
+.contacto-form input, .contacto-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+@media (min-width: 769px) {
+    .menu-icon { display: none; }
+    .menu-links { display: flex; flex-direction: row; justify-content: center; gap: 20px; }
+    .menu-links a { border: none; }
 }

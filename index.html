@@ -3,98 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUSK MOVILE - El Futuro en tus Manos</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Nova Market | Tu súper online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1><img src="icons/logoDUSK.png" alt="DUSK LOGO" class="logo"></h1>
-        <p>La nueva tecnología con los nuevos procesos mejorados</p>
-    </header>
+<header>
+    <div class="logo-container">
+        <img src="logos/logo corte.png" class="logo" alt="Nova Market Logo">
+    </div>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Características</a></li>
-            <li><a href="#">Opiniones</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-links" id="menu">
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#ofertas">Promociones</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+</nav>
 
-    <main>
-        <section id="producto-central">
-            <article>
-                <h2>Smartphone DUSK II Pro X</h2>
-                <p>Lanzado el <time datetime="2024-05-20">20 de mayo de 2024</time>, este dispositivo redefine la potencia.</p>
-                
-                <section class="galeria-expandible">
-                    <img src="icons/celar.png" alt="Vista Frontal DUSK">
-                    <img src="icons/CAMARA.png" alt="Vista Lateral DUSK">
-                    <img src="icons/PANTALAA.jpg" alt="Vista Trasera DUSK">
-                    <img src="icons/fotosdd.avif" alt="Detalle Lente DUSK">
-                </section>
+<main class="container">
+    
+    <section id="productos">
+        <section id="productos">
+    <h2>Productos Destacados</h2>
+    <div class="productos-grid">
 
-                <p>El procesador más rápido del mercado permite una <b>velocidad de procesamiento un 40% superior</b> a su antecesor.</p>
-                
-                <section class="acordion-container">
-                    <h3>Detalles del Hardware</h3>
-                    <details>
-                        <summary>Cámara Ultra Vision</summary>
-                        <figure>
-                            <img src="icons/camara.png" alt="Lentes de la cámara">
-                            <figcaption>Sensor principal de 108MP con estabilización óptica.</figcaption>
-                        </figure>
-                    </details>
-                    <details>
-                        <summary>Pantalla Dynamic OLED</summary>
-                        <figure>
-                            <img src="icons/PANTALAA.jpg" alt="Pantalla DUSK">
-                            <figcaption>Tasa de refresco de 120Hz para una fluidez total.</figcaption>
-                        </figure>
-                    </details>
-                </section>
-
-                <details>
-                    <summary>Ver especificaciones técnicas (Texto)</summary>
-                    <ul>
-                        <li>Memoria RAM: 16GB</li>
-                        <li>Almacenamiento: 512GB SSD</li>
-                    </ul>
-                </details>
-            </article>
-        </section>
-
-        <div class="contenedor-inferior">
-            <section id="contacto">
-                <h3>Contacto</h3>
-                <div class="contacto-wrapper">
-                    <article>
-                        <h4>Soporte</h4>
-                        <p>📧 soporte@duskmovile.com</p>
-                    </article>
-                    <article>
-                        <h4>Ventas</h4>
-                        <p>📞 +51 900 000 000</p>
-                    </article>
-                </div>
-            </section>
-
-            <aside id="accesorios">
-                <h3>Accesorios Relacionados</h3>
-                <ul>
-                    <li>Auriculares WaveBuds</li>
-                    <li>Cargador UltraFast 65W</li>
-                    <li>Funda de Fibra de Carbono</li>
-                </ul>
-                <p><strong>Nota:</strong> Los accesorios se venden por separado.</p>
-            </aside>
+        <div class="producto">
+            <img src="logos/ARROZ.webp" alt="Arroz">
+            <h3>Arroz 1kg</h3>
+            <p class="precio">S/ 4.50</p>
+            <button class="btn-comprar">Comprar</button>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 DUSK MOVILE. Todos los derechos reservados.</p>
-    </footer>
+        <div class="producto">
+            <img src="logos/lechexs.avif" alt="Leche">
+            <h3>Leche Gloria</h3>
+            <p class="precio">S/ 3.80</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
 
+        <div class="producto descuento">
+            <span class="badge">-20%</span>
+            <img src="logos/gaseosa.png" alt="Gaseosa">
+            <h3>Gaseosa 1.5L</h3>
+            <p class="old">S/ 6.50</p>
+            <p class="precio">S/ 5.20</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/PAnsu.png" alt="Pan">
+            <h3>Pan de molde</h3>
+            <p class="precio">S/ 5.00</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto descuento">
+            <span class="badge">Promo</span>
+            <img src="logos/huevos.png" alt="Huevos">
+            <h3>Huevos (docena)</h3>
+            <p class="old">S/ 10.00</p>
+            <p class="precio">S/ 8.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/aceite.png" alt="Aceite">
+            <h3>Aceite Vegetal</h3>
+            <p class="precio">S/ 8.20</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/fideos.png" alt="Fideos">
+            <h3>Fideos 250g</h3>
+            <p class="precio">S/ 3.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/detergente.png" alt="Detergente">
+            <h3>Detergente</h3>
+            <p class="precio">S/ 7.80</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/yogurt.png" alt="Yogurt">
+            <h3>Yogurt 1L</h3>
+            <p class="precio">S/ 5.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/cafe.png" alt="Cafe">
+            <h3>Café Instantáneo</h3>
+            <p class="precio">S/ 12.00</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/azucar.png" alt="Azúcar">
+            <h3>Azúcar 1kg</h3>
+            <p class="precio">S/ 3.90</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/atun.png" alt="Atún">
+            <h3>Atún en trozos</h3>
+            <p class="precio">S/ 4.80</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/galletas.png" alt="Galletas">
+            <h3>Galletas Pack</h3>
+            <p class="precio">S/ 4.20</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/mermelada.png" alt="Mermelada">
+            <h3>Mermelada</h3>
+            <p class="precio">S/ 6.10</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="logos/papel.png" alt="Papel">
+            <h3>Papel Higiénico 24u</h3>
+            <p class="precio">S/ 54.50</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+    </div>
+</section>
+    </section>
+
+    <hr class="separator">
+
+    <section id="ofertas">
+        <h2>Ofertas de la Semana</h2>
+        <div class="acordion-container">
+            <img src="logos/promo 3por 2 gaseosas.png" alt="Promo Gaseosas">
+            <img src="logos/promoigene.png" alt="Promo Higiene">
+            <img src="logos/descuentro.png" alt="Descuento">
+
+            <a href="biolacteo.html"  class="link-promo">
+                <img src="logos/biolacteo.png" alt="biolacteo">
+            </a>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <div class="contacto-wrapper">
+            <div class="contacto-info">
+                <h3>Nova Market Cusco</h3>
+                <p>📍 Av. La cultura Nro.16, Cusco, Perú</p>
+                <p>📞 +51 987 654 321</p>
+                <p>📧 contacto@novamarket.com</p>
+                <p>⏰ Horario: Lun - Sáb | 8am - 10pm</p>
+            </div>
+            
+            <form class="contacto-form" id="miFormulario">
+                <input type="text" placeholder="Tu Nombre Completo" required>
+                <input type="email" placeholder="Tu Correo Electrónico" required>
+                <input type="number" placeholder="Tu número de Teléfono" required>
+                <textarea placeholder="¿Cómo podemos ayudarte?" rows="4" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<div id="cart-float">
+    🛒 Carrito: <span id="cart-count">0</span>
+</div>
+
+<footer>
+    <p>&copy; 2026 Nova Market - Tu Súper de Confianza</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
